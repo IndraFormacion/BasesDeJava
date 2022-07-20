@@ -35,8 +35,13 @@ public class PrintColumn {
             System.out.println("-----------------------------------");            
             System.out.println("Lista de Cafes");
             System.out.println("-----------------------------------");
+            System.out.printf("%30s %20s", "Nombre", "Precio");
+            System.out.println();
+            System.out.println("-----------------------------------------------------------------------------");
+            
             while(rs.next()) {
-                System.out.println(rs.getString("cof_name")+ ", " + rs.getFloat(3));
+            	System.out.printf("%30s %20s", rs.getString("cof_name"), rs.getFloat(3));
+                System.out.println();
             }
                     
             stmt.close();
